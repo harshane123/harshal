@@ -1,0 +1,32 @@
+openapi: 3.0.3
+info:
+  title: Executive Dashboard API
+  version: 1.0.0
+paths:
+  /kpis/summary:
+    get:
+      summary: Get top KPI cards
+      responses:
+        '200':
+          description: KPI list
+  /kpis/trends:
+    get:
+      summary: Get trend data by metric
+      parameters:
+        - in: query
+          name: metric
+          schema:
+            type: string
+        - in: query
+          name: period
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Trend series
+  /alerts/exceptions:
+    get:
+      summary: Get exception list
+      responses:
+        '200':
+          description: Exception payload

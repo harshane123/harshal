@@ -1,7 +1,79 @@
-<html>
- <head>
- </head>
- <body>
-   <h1>Hello World my name is harshal<h1>
- </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VP Executive Dashboard Mockup</title>
+  <style>
+    :root {
+      --bg: #0b1220;
+      --panel: #111a2e;
+      --text: #e6edf8;
+      --muted: #96a4c2;
+      --positive: #22c55e;
+      --warning: #f59e0b;
+      --negative: #ef4444;
+      --accent: #3b82f6;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Inter, Arial, sans-serif;
+      background: radial-gradient(circle at top right, #172446, var(--bg));
+      color: var(--text);
+      padding: 24px;
+    }
+    .header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+    .title { font-size: 28px; font-weight: 700; }
+    .stamp { color: var(--muted); font-size: 13px; }
+    .grid { display: grid; gap: 14px; grid-template-columns: repeat(12, 1fr); }
+    .card { background: var(--panel); border: 1px solid #223153; border-radius: 12px; padding: 14px; }
+    .kpi { grid-column: span 2; }
+    .label { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .04em; }
+    .value { font-size: 30px; font-weight: 700; margin-top: 4px; }
+    .delta { font-size: 12px; margin-top: 4px; }
+    .positive { color: var(--positive); }
+    .warning { color: var(--warning); }
+    .negative { color: var(--negative); }
+    .trend { grid-column: span 8; min-height: 260px; }
+    .risk { grid-column: span 4; min-height: 260px; }
+    .bar { height: 10px; border-radius: 8px; background: #223153; overflow: hidden; margin-top: 10px; }
+    .fill { height: 100%; background: var(--accent); }
+    ul { margin: 10px 0 0 18px; padding: 0; }
+    li { margin-bottom: 8px; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="title">Executive Performance Cockpit</div>
+    <div class="stamp">Last refresh: 06:42 AM | Status: Healthy</div>
+  </div>
+
+  <div class="grid">
+    <div class="card kpi"><div class="label">Revenue</div><div class="value">$48.2M</div><div class="delta positive">▲ 9.1% vs PY</div></div>
+    <div class="card kpi"><div class="label">Gross Margin</div><div class="value">43.8%</div><div class="delta positive">▲ 1.4 pts</div></div>
+    <div class="card kpi"><div class="label">Pipeline</div><div class="value">3.2x</div><div class="delta positive">Above target</div></div>
+    <div class="card kpi"><div class="label">Opex Ratio</div><div class="value">21.4%</div><div class="delta warning">Near threshold</div></div>
+    <div class="card kpi"><div class="label">Churn</div><div class="value">2.8%</div><div class="delta positive">Within guardrail</div></div>
+
+    <div class="card trend">
+      <div class="label">13-Month Revenue Trend</div>
+      <div class="bar"><div class="fill" style="width:88%"></div></div>
+      <div class="bar"><div class="fill" style="width:74%"></div></div>
+      <div class="bar"><div class="fill" style="width:81%"></div></div>
+      <div class="bar"><div class="fill" style="width:90%"></div></div>
+      <div class="bar"><div class="fill" style="width:93%"></div></div>
+    </div>
+
+    <div class="card risk">
+      <div class="label">Top Exceptions</div>
+      <ul>
+        <li><span class="negative">High:</span> Region West churn above 4.5%</li>
+        <li><span class="warning">Medium:</span> Two enterprise deals slipped > 30 days</li>
+        <li><span class="warning">Medium:</span> Opex run-rate rising in Product BU</li>
+        <li><span class="positive">Resolved:</span> APAC margin recovered after pricing update</li>
+      </ul>
+    </div>
+  </div>
+</body>
 </html>
