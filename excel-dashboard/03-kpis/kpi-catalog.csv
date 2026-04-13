@@ -1,0 +1,6 @@
+kpi_id,kpi_name,formula,business_owner,target,amber,red,frequency
+KPI001,Revenue Growth %,(CurrentPeriodRevenue-PriorPeriodRevenue)/PriorPeriodRevenue,Sales VP,>=8%,5%-7.9%,<5%,Daily
+KPI002,Gross Margin %,GrossProfit/Revenue,Finance VP,>=42%,38%-41.9%,<38%,Daily
+KPI003,Pipeline Coverage,QualifiedPipeline/QuarterlyTarget,Revenue Ops,>=3.0x,2.0x-2.99x,<2.0x,Daily
+KPI004,Operating Expense Ratio,OperatingExpenses/Revenue,COO,<=22%,22.1%-25%,>25%,Daily
+KPI005,Customer Churn %,LostCustomers/StartingCustomers,Customer Success,<=3%,3.1%-4.5%,>4.5%,Daily
